@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GoogleServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GoogleFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://drive.google.com/drive/folders/1TA1nZN55zkZ45bEV5dnh7IWBgcf2okdL</Value>
+    </Setting>
+    <Setting Name="GoogleFolderTest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://drive.google.com/drive/folders/1-HaE-hrX8hqL2Eah-yrtWnfT34S40Yh8</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

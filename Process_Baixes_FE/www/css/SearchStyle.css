@@ -1,0 +1,430 @@
+﻿
+/**************************************/
+/********* Search Page Style  *********/
+/**************************************/
+
+
+.TopPanel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.group-button {
+    padding-left: 0;
+    list-style: none;
+}
+
+    .group-button li {
+        float: right;
+        margin: 0 0 0 10px;
+    }
+
+        .group-button li input[type="submit"] {
+            background-color: rgba(0,0,0,0.2) !important;
+            font-size: 12px;
+            transition: all ease-out .4s;
+        }
+
+            .group-button li input[type="submit"]:hover {
+                background-color: rgba(0,0,0,0.8) !important;
+            }
+
+
+.input-searchicon {
+    position: relative;
+    float: left;
+}
+
+    .input-searchicon .form-control {
+        background: rgba(255,255,255,0.8) url(../img/search.svg) no-repeat center right 15px;
+    }
+
+    .input-searchicon .searchicon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+.section {
+    float: left;
+    width: 100%;
+}
+
+.popup-content {
+    position: relative;
+    max-width: 700px;
+    margin: -100px auto 0;
+    background: #ddd;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+    .popup-content:before {
+        display: block;
+        background: red;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .popup-content input[type="submit"] {
+        margin: 1em .3em;
+    }
+
+.EditPanel .popup-content .labelEP {
+    display: block;
+    color: #444;
+    padding-bottom: 0.5em;
+}
+
+.EditPanel .popup-content .tbEP {
+    margin-bottom: 1em;
+}
+
+.EditPanel .popup-content textarea.tbEP {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 10px;
+}
+
+
+.header .hero .form h3.popup-heading {
+    color: #2a58ad;
+    padding-bottom: 1em;
+}
+
+#rightbox3EP {
+    position: absolute;
+    right: 30px;
+    top: 38px;
+}
+
+    #rightbox3EP input {
+        background: transparent;
+        padding: 0;
+    }
+
+
+
+
+.EditPanel {
+    width: 100%;
+    height: 100%;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+    .EditPanel .labelEP {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        font-style: italic;
+        margin-right: 5px;
+        height: 30px;
+    }
+
+    .EditPanel .tbEP {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: black;
+        margin-right: 50px;
+    }
+
+
+.LocatedPanel {
+    width: 75%;
+    height: 100%;
+    left: 210px !important;
+    top: 0 !important;
+}
+
+    .LocatedPanel .labelEP {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        font-style: italic;
+        margin-right: 5px;
+        height: 30px;
+    }
+
+    .LocatedPanel .tbEP {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: black;
+        margin-right: 50px;
+    }
+
+
+
+.popup-content-LocatedPanel {
+    position: relative;
+    max-width: 100%;
+    margin: -100px auto 0;
+    background: #ddd;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+    .popup-content-LocatedPanel:before {
+        display: block;
+        background: red;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .popup-content-LocatedPanel input[type="submit"] {
+        margin: 1em .3em;
+    }
+
+
+#rightbox3LP {
+    position: absolute;
+    right: 30px;
+    top: 38px;
+}
+
+    #rightbox3LP input {
+        background: transparent;
+        padding: 0;
+    }
+
+
+.editing {
+    background-color: bisque;
+}
+
+
+
+.modalBackground {
+    background-color: black;
+    opacity: 0.6 !important;
+    z-index: 20;
+}
+
+.StatePanel {
+    width: 900px;
+    margin-left: -350px;
+    left: 50% !important;
+    top: 0 !important;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+}
+
+StatePanel-popup-heading
+{
+    color: blue;
+    padding: 0 2em;
+    margin-top: -246px;
+}
+
+
+
+
+.ConfirmPanel {
+    width: 700px;
+    margin-left: -350px;
+    left: 50% !important;
+    top: 0 !important;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+.literal-content {
+    padding: 4em;
+    font-weight: bold;
+    color: #444;
+}
+
+.literal-content-left {
+    text-align: left;
+    color: blue;
+}
+
+.literal-content-buttons {
+    margin-top: 2em;
+    text-align: center;
+    display: flex;
+}
+
+input[type="submit"].buttonCancel {
+    background: lightgray !important;
+}
+
+input[type="submit"].buttonRemove {
+    background: indianred !important;
+}
+
+
+#progress {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 30%;
+    z-index: 100001;
+    background-color: transparent;
+    background-position: center;
+}
+
+#rightbox {
+    float: right;
+}
+
+
+.RightboxScheduled {
+    position: relative;
+    float: right;
+}
+
+    .RightboxScheduled input[type=submit] {
+        background-color: #2a58ad;
+        padding: 5px 0px;
+        cursor: pointer;
+    }
+
+#rightbox2 {
+    float: right;
+    margin-right: 50px;
+    width: 30%;
+}
+
+#rightbox4 {
+    float: right;
+    margin-right: 20px;
+    width: 30%;
+}
+
+#rightbox5 {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.table-scroll {
+    overflow-x: scroll;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+}
+
+    .table-scroll table {
+    }
+
+    .table-scroll tbody tr {
+        font-size: 12px !important;
+        border-bottom: 1px solid lightgray;
+        background-color: white;
+    }
+
+        .table-scroll tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .table-scroll tbody tr:first-child {
+            background-color: #2a58ad;
+        }
+
+            .table-scroll tbody tr:first-child th a {
+                color: white !important;
+            }
+
+
+
+#username {
+    font-weight: bold;
+}
+
+.search-box {
+    float: left;
+    width: 100%;
+}
+
+
+.grid-style {
+    width: 98%;
+    margin: auto;
+    align-content: center;
+}
+
+    .grid-style #SelectRow {
+    }
+
+
+.thisbutton {
+    background-color: lightslategray;
+    /* width: 50px;*/
+}
+
+#ImageButton1 {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+
+    .popup-content {
+        padding: 0 2em;
+        margin-top: -246px;
+    }
+
+    .header .hero .form h3.popup-heading {
+        padding-top: 2em;
+    }
+
+    .popup-content input[type="submit"] {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .TopPanel {
+        display: block;
+    }
+
+    .input-searchicon {
+        width: 100%;
+    }
+
+        .input-searchicon .form-control {
+            width: 100% !important;
+        }
+
+    #rightbox {
+        float: none;
+    }
+
+    .group-button li {
+        float: none;
+    }
+}

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+	<!-- PRODUCCIÓN -->
+		
+
+	<connectionString>
+		<DataSource>SVSQL01\ORIOR</DataSource>
+		<InitialCatalog>ORIOR</InitialCatalog>
+		<PersistSecurity>false</PersistSecurity>;
+		<IntegratedSecurity>true</IntegratedSecurity>
+		<MaxPoolSize>10000</MaxPoolSize>
+	</connectionString>
+	
+
+	
+	<dataBaseProperties>
+		<ddbb>orior</ddbb>
+		<schema>ad</schema>
+		<scheduledTable>BajaEmpleado</scheduledTable>
+		<userstable>Usuarios</userstable>
+		<permissiontable>PermisosUsuario</permissiontable>
+		<logbajastable>LogBajas</logbajastable>
+	</dataBaseProperties>
+	
+
+	<!-- TEST 
+	<connectionString>
+		<DataSource>svsql02\orior</DataSource>
+		<InitialCatalog>orior_test</InitialCatalog>
+		<PersistSecurity>false</PersistSecurity>;
+		<IntegratedSecurity>true</IntegratedSecurity>
+		<MaxPoolSize>10000</MaxPoolSize>
+	</connectionString>
+
+	
+	<dataBaseProperties>
+		<ddbb>orior_test</ddbb>
+		<schema>ad</schema>
+		<scheduledTable>BajaEmpleado</scheduledTable>
+		<userstable>Usuarios</userstable>
+		<permissiontable>PermisosUsuario</permissiontable>
+		<logbajastable>LogBajas</logbajastable>
+	</dataBaseProperties>  -->
+	
+</configuration>
+

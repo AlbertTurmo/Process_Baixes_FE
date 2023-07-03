@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Projectea Baixes" />
+  <setParameter name="orior_production_entities-Web.config Connection String" value="metadata=res://*/Data_Model.csdl|res://*/Data_Model.ssdl|res://*/Data_Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=svsql01\orior;Initial Catalog=ORIOR;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework&quot;" />
+  <setParameter name="UnsubscribeR.orior_test_entities-Web.config Connection String" value="Data Source=svsql02\orior;Initial Catalog=ORIOR_TEST;Integrated Security=True" />
+  <setParameter name="orior_entities_production-Web.config Connection String" value="metadata=res://*/unsuscribe_model_production.csdl|res://*/unsuscribe_model_production.ssdl|res://*/unsuscribe_model_production.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=svsql01\orior;initial catalog=ORIOR;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+  <setParameter name="ORIOR_TESTConnectionString-Web.config Connection String" value="Data Source=svsql02\orior;Initial Catalog=ORIOR_TEST;Integrated Security=True" />
+  <setParameter name="orior_test_entities-Web.config Connection String" value="" />
+</parameters>

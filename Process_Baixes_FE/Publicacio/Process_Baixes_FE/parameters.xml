@@ -1,0 +1,13 @@
+﻿<parameters>
+  <parameter name="IIS Web Application Name" defaultValue="Projectea Baixes" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Projectes\\Baixes\\Baixes\ Projectes\\Baixes_FE\\Process_Baixes_FE\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Projectes\\Baixes\\Baixes\ Projectes\\Baixes_FE\\Process_Baixes_FE\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="orior_production_entities-Web.config Connection String" defaultValue="metadata=res://*/Data_Model.csdl|res://*/Data_Model.ssdl|res://*/Data_Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=svsql01\orior;Initial Catalog=ORIOR;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework&quot;">
+    <parameterEntry kind="XmlFile" scope="C:\\Projectes\\Baixes\\Baixes\ Projectes\\Baixes_FE\\Process_Baixes_FE\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='orior_production_entities']/@connectionString" />
+  </parameter>
+  <parameter name="UnsubscribeR.orior_test_entities-Web.config Connection String" defaultValue="Data Source=svsql02\orior;Initial Catalog=ORIOR_TEST;Integrated Security=True" />
+  <parameter name="orior_entities_production-Web.config Connection String" defaultValue="metadata=res://*/unsuscribe_model_production.csdl|res://*/unsuscribe_model_production.ssdl|res://*/unsuscribe_model_production.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=svsql01\orior;initial catalog=ORIOR;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+  <parameter name="ORIOR_TESTConnectionString-Web.config Connection String" defaultValue="Data Source=svsql02\orior;Initial Catalog=ORIOR_TEST;Integrated Security=True" />
+  <parameter name="orior_test_entities-Web.config Connection String" defaultValue="" />
+</parameters>

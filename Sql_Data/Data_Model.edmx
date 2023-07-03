@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="oiror_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Exports">
+          <Key>
+            <PropertyRef Name="ExportsId" />
+          </Key>
+          <Property Name="ExportsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InicioProceso" Type="datetime" />
+          <Property Name="IssueKey" Type="varchar" MaxLength="50" />
+          <Property Name="WindowsId" Type="varchar" MaxLength="50" />
+          <Property Name="EmpleadoId" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="Nif" Type="varchar" MaxLength="50" />
+          <Property Name="StatusKey" Type="varchar" MaxLength="50" />
+          <Property Name="Mail" Type="varchar" MaxLength="100" />
+          <Property Name="MailResponsible" Type="varchar" MaxLength="100" />
+          <Property Name="UpdateProcess" Type="datetime" />
+          <Property Name="StatusProcess" Type="varchar" MaxLength="50" />
+          <Property Name="ExportIdentificator" Type="varchar" MaxLength="150" />
+          <Property Name="ExportName" Type="varchar" MaxLength="100" />
+          <Property Name="Folder" Type="varchar" MaxLength="255" />
+          <Property Name="StatusExport" Type="varchar" MaxLength="50" />
+          <Property Name="ErrorExport" Type="varchar" MaxLength="50" />
+          <Property Name="StatusDrive" Type="varchar" MaxLength="50" />
+          <Property Name="SizeInBytes" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="StatusTransfer" Type="varchar" MaxLength="50" />
+          <Property Name="StatusAd" Type="varchar" MaxLength="50" />
+          <Property Name="StatusAlias" Type="varchar" MaxLength="50" />
+          <Property Name="StatusGoogleUser" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LogPBajasA">
+          <Key>
+            <PropertyRef Name="LogBajasId" />
+          </Key>
+          <Property Name="LogBajasId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartProcess" Type="datetime" />
+          <Property Name="Ticket" Type="varchar" MaxLength="30" />
+          <Property Name="StatusTicket" Type="varchar" MaxLength="40" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="WindowsId" Type="varchar" MaxLength="50" />
+          <Property Name="Mail" Type="varchar" MaxLength="100" />
+          <Property Name="Nif" Type="varchar" MaxLength="30" />
+          <Property Name="ResponsableTicket" Type="varchar" MaxLength="200" />
+          <Property Name="ResponsableAd" Type="varchar" MaxLength="200" />
+          <Property Name="StatusProcess" Type="varchar" MaxLength="50" />
+          <Property Name="ChangeStatusP" Type="datetime" />
+          <Property Name="BackupMail" Type="bit" />
+          <Property Name="BackupDrive" Type="bit" />
+          <Property Name="Transfer" Type="bit" />
+          <Property Name="DeleteAd" Type="bit" />
+          <Property Name="EmployeeNumber" Type="int" />
+          <Property Name="CreateAlias" Type="bit" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="UsuariosId" />
+          </Key>
+          <Property Name="UsuariosId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="windowsid" Type="varchar" MaxLength="50" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="date" Type="varchar" MaxLength="50" />
+          <Property Name="level" Type="int" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="empleadoId" />
+          </Key>
+          <Property Name="empleadoId" Type="int" Nullable="false" />
+          <Property Name="sociedadId" Type="varchar" MaxLength="4" />
+          <Property Name="usuarioWindows" Type="varchar" MaxLength="30" />
+          <Property Name="nombre" Type="varchar" MaxLength="40" />
+          <Property Name="apellido1" Type="varchar" MaxLength="50" />
+          <Property Name="apellido2" Type="varchar" MaxLength="50" />
+          <Property Name="unidadOrganizativaId" Type="varchar" MaxLength="20" />
+          <Property Name="nombreCompleto" Type="varchar" MaxLength="140" />
+          <Property Name="email" Type="varchar" MaxLength="200" />
+          <Property Name="dni" Type="varchar" MaxLength="20" />
+          <Property Name="telefonoPersonal" Type="varchar" MaxLength="20" />
+          <Property Name="telefonoEmpresa" Type="varchar" MaxLength="20" />
+          <Property Name="controlGastoTfo" Type="varchar" MaxLength="20" />
+          <Property Name="ultimaModificacion" Type="datetime" />
+          <Property Name="activo" Type="bit" />
+          <Property Name="cebe" Type="varchar" MaxLength="100" />
+          <Property Name="cebeDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="posicion" Type="varchar" MaxLength="100" />
+          <Property Name="posicionDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="divisionPersonal" Type="varchar" MaxLength="100" />
+          <Property Name="divisionPersonalDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="subDivisionPersonal" Type="varchar" MaxLength="100" />
+          <Property Name="subDivisionPersonalDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="alias" Type="varchar" MaxLength="100" />
+          <Property Name="fechaNacimiento" Type="varchar" MaxLength="100" />
+          <Property Name="paisTrabajo" Type="varchar" MaxLength="100" />
+          <Property Name="paisTrabajoDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="telefonoContacto" Type="varchar" MaxLength="100" />
+          <Property Name="telefonoContactoDescripcion" Type="varchar" MaxLength="100" />
+          <Property Name="emailPrivado" Type="varchar" MaxLength="100" />
+          <Property Name="usuarioSapActivo" Type="varchar" MaxLength="100" />
+          <Property Name="fechaAlta" Type="varchar" MaxLength="100" />
+          <Property Name="unidadOrganizativaDescripcion" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_Empleado_Empleado">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Empleado1" Type="Self.Empleado" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="empleadoId" />
+            </Principal>
+            <Dependent Role="Empleado1">
+              <PropertyRef Name="empleadoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="oiror_modelStoreContainer">
+          <EntitySet Name="Exports" EntityType="Self.Exports" Schema="ad" store:Type="Tables" />
+          <EntitySet Name="LogPBajasA" EntityType="Self.LogPBajasA" Schema="ad" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="ad" store:Type="Tables" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="hr" store:Type="Tables" />
+          <AssociationSet Name="FK_Empleado_Empleado" Association="Self.FK_Empleado_Empleado">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Empleado1" EntitySet="Empleado" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="oiror_model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="empleadoId" />
+          </Key>
+          <Property Name="empleadoId" Type="Int32" Nullable="false" />
+          <Property Name="sociedadId" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="usuarioWindows" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="apellido1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="apellido2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="unidadOrganizativaId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="nombreCompleto" Type="String" MaxLength="140" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="dni" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="telefonoPersonal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="telefonoEmpresa" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="controlGastoTfo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ultimaModificacion" Type="DateTime" Precision="3" />
+          <Property Name="activo" Type="Boolean" />
+          <Property Name="cebe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cebeDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="posicion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="posicionDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="divisionPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="divisionPersonalDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="subDivisionPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="subDivisionPersonalDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fechaNacimiento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="paisTrabajo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="paisTrabajoDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telefonoContacto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telefonoContactoDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="emailPrivado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="usuarioSapActivo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="unidadOrganizativaDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Empleado1" Relationship="Self.FK_Empleado_Empleado" FromRole="Empleado" ToRole="Empleado1" />
+          <NavigationProperty Name="Empleado2" Relationship="Self.FK_Empleado_Empleado" FromRole="Empleado1" ToRole="Empleado" />
+        </EntityType>
+        <Association Name="FK_Empleado_Empleado">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Empleado1" Type="Self.Empleado" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="empleadoId" />
+            </Principal>
+            <Dependent Role="Empleado1">
+              <PropertyRef Name="empleadoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="orior_production_entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+          <AssociationSet Name="FK_Empleado_Empleado" Association="Self.FK_Empleado_Empleado">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Empleado1" EntitySet="Empleado" />
+          </AssociationSet>
+          <EntitySet Name="LogPBajasA" EntityType="oiror_model.LogPBajasA" />
+          <EntitySet Name="Exports" EntityType="oiror_model.Exports" />
+          <EntitySet Name="Usuarios" EntityType="oiror_model.Usuarios" />
+        </EntityContainer>
+        <EntityType Name="LogPBajasA">
+          <Key>
+            <PropertyRef Name="LogBajasId" />
+          </Key>
+          <Property Name="LogBajasId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartProcess" Type="DateTime" Precision="3" />
+          <Property Name="Ticket" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="StatusTicket" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WindowsId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Nif" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ResponsableTicket" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ResponsableAd" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="StatusProcess" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChangeStatusP" Type="DateTime" Precision="3" />
+          <Property Name="BackupMail" Type="Boolean" />
+          <Property Name="BackupDrive" Type="Boolean" />
+          <Property Name="Transfer" Type="Boolean" />
+          <Property Name="DeleteAd" Type="Boolean" />
+          <Property Name="EmployeeNumber" Type="Int32" />
+          <Property Name="CreateAlias" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Exports">
+          <Key>
+            <PropertyRef Name="ExportsId" />
+          </Key>
+          <Property Name="ExportsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InicioProceso" Type="DateTime" Precision="3" />
+          <Property Name="IssueKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StatusKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmpleadoId" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Nif" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExportIdentificator" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ExportName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StatusExport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ErrorExport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpdateProcess" Type="DateTime" Precision="3" />
+          <Property Name="Folder" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StatusDrive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MailResponsible" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SizeInBytes" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="StatusTransfer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StatusProcess" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StatusAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WindowsId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StatusAlias" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StatusGoogleUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="UsuariosId" />
+          </Key>
+          <Property Name="UsuariosId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="windowsid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="level" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="oiror_modelStoreContainer" CdmEntityContainer="orior_production_entities">
+          <EntitySetMapping Name="Empleado">
+            <EntityTypeMapping TypeName="oiror_model.Empleado">
+              <MappingFragment StoreEntitySet="Empleado">
+                <ScalarProperty Name="empleadoId" ColumnName="empleadoId" />
+                <ScalarProperty Name="sociedadId" ColumnName="sociedadId" />
+                <ScalarProperty Name="usuarioWindows" ColumnName="usuarioWindows" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido1" ColumnName="apellido1" />
+                <ScalarProperty Name="apellido2" ColumnName="apellido2" />
+                <ScalarProperty Name="unidadOrganizativaId" ColumnName="unidadOrganizativaId" />
+                <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="dni" ColumnName="dni" />
+                <ScalarProperty Name="telefonoPersonal" ColumnName="telefonoPersonal" />
+                <ScalarProperty Name="telefonoEmpresa" ColumnName="telefonoEmpresa" />
+                <ScalarProperty Name="controlGastoTfo" ColumnName="controlGastoTfo" />
+                <ScalarProperty Name="ultimaModificacion" ColumnName="ultimaModificacion" />
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="cebe" ColumnName="cebe" />
+                <ScalarProperty Name="cebeDescripcion" ColumnName="cebeDescripcion" />
+                <ScalarProperty Name="posicion" ColumnName="posicion" />
+                <ScalarProperty Name="posicionDescripcion" ColumnName="posicionDescripcion" />
+                <ScalarProperty Name="divisionPersonal" ColumnName="divisionPersonal" />
+                <ScalarProperty Name="divisionPersonalDescripcion" ColumnName="divisionPersonalDescripcion" />
+                <ScalarProperty Name="subDivisionPersonal" ColumnName="subDivisionPersonal" />
+                <ScalarProperty Name="subDivisionPersonalDescripcion" ColumnName="subDivisionPersonalDescripcion" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="paisTrabajo" ColumnName="paisTrabajo" />
+                <ScalarProperty Name="paisTrabajoDescripcion" ColumnName="paisTrabajoDescripcion" />
+                <ScalarProperty Name="telefonoContacto" ColumnName="telefonoContacto" />
+                <ScalarProperty Name="telefonoContactoDescripcion" ColumnName="telefonoContactoDescripcion" />
+                <ScalarProperty Name="emailPrivado" ColumnName="emailPrivado" />
+                <ScalarProperty Name="usuarioSapActivo" ColumnName="usuarioSapActivo" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="unidadOrganizativaDescripcion" ColumnName="unidadOrganizativaDescripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogPBajasA">
+            <EntityTypeMapping TypeName="oiror_model.LogPBajasA">
+              <MappingFragment StoreEntitySet="LogPBajasA">
+                <ScalarProperty Name="CreateAlias" ColumnName="CreateAlias" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="DeleteAd" ColumnName="DeleteAd" />
+                <ScalarProperty Name="Transfer" ColumnName="Transfer" />
+                <ScalarProperty Name="BackupDrive" ColumnName="BackupDrive" />
+                <ScalarProperty Name="BackupMail" ColumnName="BackupMail" />
+                <ScalarProperty Name="ChangeStatusP" ColumnName="ChangeStatusP" />
+                <ScalarProperty Name="StatusProcess" ColumnName="StatusProcess" />
+                <ScalarProperty Name="ResponsableAd" ColumnName="ResponsableAd" />
+                <ScalarProperty Name="ResponsableTicket" ColumnName="ResponsableTicket" />
+                <ScalarProperty Name="Nif" ColumnName="Nif" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="WindowsId" ColumnName="WindowsId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StatusTicket" ColumnName="StatusTicket" />
+                <ScalarProperty Name="Ticket" ColumnName="Ticket" />
+                <ScalarProperty Name="StartProcess" ColumnName="StartProcess" />
+                <ScalarProperty Name="LogBajasId" ColumnName="LogBajasId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Exports">
+            <EntityTypeMapping TypeName="oiror_model.Exports">
+              <MappingFragment StoreEntitySet="Exports">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="StatusGoogleUser" ColumnName="StatusGoogleUser" />
+                <ScalarProperty Name="StatusAlias" ColumnName="StatusAlias" />
+                <ScalarProperty Name="WindowsId" ColumnName="WindowsId" />
+                <ScalarProperty Name="StatusAd" ColumnName="StatusAd" />
+                <ScalarProperty Name="StatusProcess" ColumnName="StatusProcess" />
+                <ScalarProperty Name="StatusTransfer" ColumnName="StatusTransfer" />
+                <ScalarProperty Name="SizeInBytes" ColumnName="SizeInBytes" />
+                <ScalarProperty Name="MailResponsible" ColumnName="MailResponsible" />
+                <ScalarProperty Name="StatusDrive" ColumnName="StatusDrive" />
+                <ScalarProperty Name="Folder" ColumnName="Folder" />
+                <ScalarProperty Name="UpdateProcess" ColumnName="UpdateProcess" />
+                <ScalarProperty Name="ErrorExport" ColumnName="ErrorExport" />
+                <ScalarProperty Name="StatusExport" ColumnName="StatusExport" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="ExportName" ColumnName="ExportName" />
+                <ScalarProperty Name="ExportIdentificator" ColumnName="ExportIdentificator" />
+                <ScalarProperty Name="Nif" ColumnName="Nif" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+                <ScalarProperty Name="StatusKey" ColumnName="StatusKey" />
+                <ScalarProperty Name="IssueKey" ColumnName="IssueKey" />
+                <ScalarProperty Name="InicioProceso" ColumnName="InicioProceso" />
+                <ScalarProperty Name="ExportsId" ColumnName="ExportsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="oiror_model.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="windowsid" ColumnName="windowsid" />
+                <ScalarProperty Name="UsuariosId" ColumnName="UsuariosId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

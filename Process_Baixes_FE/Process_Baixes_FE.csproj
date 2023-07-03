@@ -1,0 +1,243 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87F86915-9EDA-4F06-8438-53769D889D7F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnsubscribeR</RootNamespace>
+    <AssemblyName>UnsubscribeRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <IISExpressSSLPort>44304</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoginPage.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="www\css\all.min.css" />
+    <Content Include="www\css\bootstrap.min.css" />
+    <Content Include="www\css\FormStyle.css" />
+    <Content Include="www\css\SearchStyle.css" />
+    <Content Include="www\css\Style.css" />
+    <Content Include="www\img\0.jfif" />
+    <Content Include="www\img\1200px-Crystal_Clear_action_button_cancel.svg.png" />
+    <Content Include="www\img\calender.png" />
+    <Content Include="www\img\cancel_sh.png" />
+    <Content Include="www\img\cance_edit3_sh.png" />
+    <Content Include="www\img\delete_sh.png" />
+    <Content Include="www\img\edit_sh.png" />
+    <Content Include="www\img\search.svg" />
+    <Content Include="www\img\tempo.gif" />
+    <Content Include="www\img\lupa.png" />
+    <Content Include="www\img\oca.jpg" />
+    <Content Include="www\img\OCAGlobalPNG.png" />
+    <Content Include="www\img\validate.PNG" />
+    <Content Include="www\img\validate_db_sh.png" />
+    <Content Include="www\img\validate_sh.png" />
+    <Content Include="www\img\wait2.gif" />
+    <Content Include="www\img\wait3.gif" />
+    <Content Include="www\img\wait4.gif" />
+    <Content Include="www\js\main.js" />
+    <Content Include="www\lib\easing\easing.js" />
+    <Content Include="www\lib\easing\easing.min.js" />
+    <Content Include="www\lib\isotope\isotope.pkgd.js" />
+    <Content Include="www\lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="www\lib\lightbox\css\lightbox.css" />
+    <Content Include="www\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="www\lib\lightbox\images\close.png" />
+    <Content Include="www\lib\lightbox\images\loading.gif" />
+    <Content Include="www\lib\lightbox\images\next.png" />
+    <Content Include="www\lib\lightbox\images\prev.png" />
+    <Content Include="www\lib\lightbox\js\lightbox.js" />
+    <Content Include="www\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="www\lib\lightbox\links.php" />
+    <Content Include="www\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="www\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="www\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="www\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="www\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="www\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="www\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="www\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="www\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="www\lib\owlcarousel\owl.carousel.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Search_FoundsPanel.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConnectAd.cs" />
+    <Compile Include="Search_ConfirmPanel.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search_EditPanel.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LdapAuthenticator.cs" />
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="master.Master" />
+    <Content Include="obj\Debug\dll.config" />
+    <Content Include="obj\Release\dll.config" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="www\lib\owlcarousel\LICENSE" />
+    <Content Include="www\img\closeWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AjaxControlToolkit">
+      <Version>20.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Google.Apis.Admin.Directory.directory_v1">
+      <Version>1.60.0.3057</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Llibreries\EncryptToolsProject\EncryptToolsProject.csproj">
+      <Project>{ba7f0c08-8e66-4017-8341-6bde65f99d54}</Project>
+      <Name>EncryptToolsProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\BaixesServiceSolucio - StandAlone\UploadService\GoogleServices.csproj">
+      <Project>{2ef1c0d5-0e0c-477b-841f-b33e3ddd6909}</Project>
+      <Name>GoogleServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonTools\CommonTools.csproj">
+      <Project>{14425b65-3f1a-4ed2-853a-fc624dff927f}</Project>
+      <Name>CommonTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sql_Data\Sql_Data.csproj">
+      <Project>{7f257601-3d8a-4f36-9a63-f3a3febaff58}</Project>
+      <Name>Sql_Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51562</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51562/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

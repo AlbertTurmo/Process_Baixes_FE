@@ -1,0 +1,41 @@
+
+    Directory: C:\Projectes\Projectes Reals\Projecte Solicitud de Baixes\Front-End\unsubscribeRequest 009\unsubscribeRequest
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          28/05/2021     8:51                bin
+d----          28/05/2021     8:51                obj
+d----          28/05/2021     8:51                Properties
+d----          28/05/2021     8:51                www
+-a---          26/05/2021    10:03          11223 connectAd.cs
+-a---          28/05/2021    14:06           1838 connectSqlLog.cs
+-a---          25/05/2021    14:01           2603 connectSqlLoginPage.cs
+-a---          28/05/2021    11:17          15969 connectSqlSearch.cs
+-a---          25/05/2021    14:35           9261 EncTools.cs
+-a---          03/05/2021    13:24            713 ldapAuthenticator.cs
+-a---          28/05/2021    14:06           1809 log.cs
+-a---          26/05/2021    16:11           7696 LoginPage.aspx
+-a---          28/05/2021    14:24           2338 LoginPage.aspx.cs
+-a---          10/05/2021    17:22           2372 LoginPage.aspx.designer.cs
+-a---          28/05/2021    11:42           6611 LoginPage2.aspx
+-a---          28/05/2021    14:24           2180 LoginPage2.aspx.cs
+-a---          30/04/2021    14:58           1254 LoginPage2.aspx.designer.cs
+-a---          07/05/2021    12:44           4423 master.Master
+-a---          04/05/2021    13:41            340 master.Master.cs
+-a---          04/05/2021    13:50           1666 master.Master.designer.cs
+-a---          11/05/2021    16:12            259 packages.config
+-a---          03/03/2021    16:20           1484 registrationFormWF.csproj.user
+-a---          04/06/2021    12:52              0 result.txt
+-a---          28/05/2021    11:31          32969 Search.aspx
+-a---          28/05/2021    14:24          11073 Search.aspx.cs
+-a---          28/05/2021    10:11          24183 Search.aspx.designer.cs
+-a---          28/05/2021    14:24          18152 SearchLocatedEvents.cs
+-a---          26/05/2021    13:43           4050 SearchSheduledEvents.cs
+-a---          03/05/2021    13:24           6202 sendMailClass.cs
+-a---          04/06/2021    12:25          11781 unsubscribeRequest.csproj
+-a---          04/06/2021    12:25           1781 unsubscribeRequest.csproj.user
+-a---          26/05/2021    16:54           6728 user.cs
+-a---          11/05/2021    16:12           2054 Web.config
+-a---          03/03/2021    16:20           1322 Web.Debug.config
+-a---          03/03/2021    16:20           1383 Web.Release.config
+

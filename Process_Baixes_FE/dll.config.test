@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+	<!-- FINAL TEST	-->
+
+	<!--PRODUCCION-->
+
+	<connectionString>
+		<DataSource>SVSQL02\ORIOR</DataSource>
+		<InitialCatalog>ORIOR_TEST</InitialCatalog>
+		<PersistSecurity>false</PersistSecurity>;
+		<IntegratedSecurity>true</IntegratedSecurity>
+		<MaxPoolSize>10000</MaxPoolSize>
+	</connectionString>
+
+
+	<mailProperties>
+		<MailTo>albert.turmo@ocaglobal.com</MailTo>
+		<MailTo>gon.cuatrecasas@ocaglobal.com</MailTo>
+		<MailTo>itsm@ocaglobal.com</MailTo>
+		<MailFrom>apps@ocagroup.es</MailFrom>
+		<Port>587</Port>
+		<Host>smtp.gmail.com</Host>
+		<EnableSsl>true</EnableSsl>
+		<UseDefaultCredentials>true</UseDefaultCredentials>
+		<MailFrom>apps@ocagroup.es</MailFrom>
+		<CredentialsName>apps@ocagroup.es</CredentialsName>
+		<CredentialsPassword>2uDWrdPfQ</CredentialsPassword>
+	</mailProperties>
+
+
+
+	<dataBaseProperties>
+		<ddbb>orior_test</ddbb>
+		<schema>ad</schema>
+		<scheduledTable>BajaEmpleado</scheduledTable>
+		<userstable>Usuarios</userstable>
+		<permissiontable>PermisosUsuario</permissiontable>
+		<logbajastable>LogBajas</logbajastable>
+	</dataBaseProperties>
+
+
+
+	<!--PRODUCCION 
+	 internal const string ddbb = "orior_test";
+            internal const string schema = "ad";
+            /* Tables */
+            internal const string scheduledTable = "BajaEmpleado";
+            internal const string userstable = "Usuarios";
+            internal const string permissiontable = "PermisosUsuario";
+            internal const string logbajastable = "LogBajas";
+
+	-->
+
+
+
+
+
+
+</configuration>
+
