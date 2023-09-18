@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Anonims_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Acces">
+          <Key>
+            <PropertyRef Name="AccesId" />
+          </Key>
+          <Property Name="AccesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="int" Nullable="false" />
+          <Property Name="ngs" Type="int" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="100" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="Accessibilitat" Type="bit" Nullable="false" />
+          <Property Name="observacions" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Adreces">
+          <Key>
+            <PropertyRef Name="AdrecesId" />
+          </Key>
+          <Property Name="AdrecesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="n" Type="float" />
+          <Property Name="ngs" Type="float" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="nvarchar" MaxLength="255" />
+          <Property Name="NomGrup" Type="nvarchar" MaxLength="255" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+          <Property Name="tv" Type="nvarchar" MaxLength="255" />
+          <Property Name="c" Type="nvarchar" MaxLength="255" />
+          <Property Name="num" Type="float" />
+          <Property Name="anum" Type="nvarchar" MaxLength="255" />
+          <Property Name="ps" Type="nvarchar" MaxLength="255" />
+          <Property Name="pt" Type="nvarchar" MaxLength="255" />
+          <Property Name="cp" Type="float" />
+          <Property Name="poblacio" Type="nvarchar" MaxLength="255" />
+          <Property Name="provincia" Type="nvarchar" MaxLength="255" />
+          <Property Name="observacions" Type="nvarchar" MaxLength="255" />
+          <Property Name="Hyperlink" Type="nvarchar" MaxLength="50" />
+          <Property Name="districte" Type="nvarchar" MaxLength="255" />
+          <Property Name="Comarca" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Contactes">
+          <Key>
+            <PropertyRef Name="ContactesId" />
+          </Key>
+          <Property Name="ContactesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="int" />
+          <Property Name="ngs" Type="int" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="50" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="Nom" Type="varchar" MaxLength="100" />
+          <Property Name="Telefon" Type="int" />
+        </EntityType>
+        <EntityType Name="Festius">
+          <Key>
+            <PropertyRef Name="FestiusId" />
+          </Key>
+          <Property Name="FestiusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="float" Nullable="false" />
+          <Property Name="ngs" Type="float" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="100" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="SessionaFestius" Type="varchar" MaxLength="20" />
+          <Property Name="Observacions" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="GrupsId" />
+          </Key>
+          <Property Name="GrupsId" Type="int" Nullable="false" />
+          <Property Name="SectionNumber" Type="int" />
+          <Property Name="NomGrup" Type="nvarchar" MaxLength="255" />
+          <Property Name="Opened" Type="bit" />
+        </EntityType>
+        <EntityType Name="Horari">
+          <Key>
+            <PropertyRef Name="HorariId" />
+          </Key>
+          <Property Name="HorariId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="WeekDay" Type="varchar" MaxLength="50" />
+          <Property Name="Hour" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="LatLon">
+          <Key>
+            <PropertyRef Name="LatLonId" />
+          </Key>
+          <Property Name="LatLonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="int" Nullable="false" />
+          <Property Name="ngs" Type="int" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="100" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="lat" Type="float" />
+          <Property Name="lon" Type="float" />
+        </EntityType>
+        <EntityType Name="Locals">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="float" Nullable="false" />
+          <Property Name="ngs" Type="float" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="100" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="Local" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Mails">
+          <Key>
+            <PropertyRef Name="MailsId" />
+          </Key>
+          <Property Name="MailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="float" />
+          <Property Name="ngs" Type="float" />
+          <Property Name="ns" Type="nvarchar" MaxLength="255" />
+          <Property Name="Seccio" Type="nvarchar" MaxLength="255" />
+          <Property Name="NomGrup" Type="nvarchar" MaxLength="255" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Obertes">
+          <Key>
+            <PropertyRef Name="ObertesId" />
+          </Key>
+          <Property Name="ObertesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Oberta" Type="varchar" MaxLength="2" />
+          <Property Name="Observacions" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionNumber" />
+          </Key>
+          <Property Name="SectionNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Section" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Servidors">
+          <Key>
+            <PropertyRef Name="ServidorsId" />
+          </Key>
+          <Property Name="ServidorsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="n" Type="float" Nullable="false" />
+          <Property Name="ngs" Type="float" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="100" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="servei" Type="varchar" MaxLength="100" />
+          <Property Name="nom" Type="varchar" MaxLength="100" />
+          <Property Name="telefon" Type="int" />
+        </EntityType>
+        <EntityType Name="Transports">
+          <Key>
+            <PropertyRef Name="TransportsId" />
+          </Key>
+          <Property Name="TransportsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupsId" Type="int" Nullable="false" />
+          <Property Name="n" Type="float" Nullable="false" />
+          <Property Name="ngs" Type="float" />
+          <Property Name="ns" Type="int" />
+          <Property Name="Seccio" Type="varchar" MaxLength="100" />
+          <Property Name="NomGrup" Type="varchar" MaxLength="100" />
+          <Property Name="Tipus" Type="varchar" MaxLength="30" />
+          <Property Name="Linia" Type="varchar" MaxLength="255" />
+          <Property Name="Estacio" Type="varchar" MaxLength="255" />
+          <Property Name="Link" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_Acces_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Acces" Type="Self.Acces" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Acces">
+              <PropertyRef Name="AccesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Adreces_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Adreces" Type="Self.Adreces" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Adreces">
+              <PropertyRef Name="AdrecesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contactes_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Contactes" Type="Self.Contactes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Contactes">
+              <PropertyRef Name="GroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Festius_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Festius" Type="Self.Festius" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Festius">
+              <PropertyRef Name="FestiusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Groups_Sections">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="0..1" />
+          <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionNumber" />
+            </Principal>
+            <Dependent Role="Groups">
+              <PropertyRef Name="SectionNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Horari_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Horari" Type="Self.Horari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Horari">
+              <PropertyRef Name="GroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LatLon_Adreces">
+          <End Role="Adreces" Type="Self.Adreces" Multiplicity="1" />
+          <End Role="LatLon" Type="Self.LatLon" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Adreces">
+              <PropertyRef Name="AdrecesId" />
+            </Principal>
+            <Dependent Role="LatLon">
+              <PropertyRef Name="LatLonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Local_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Locals" Type="Self.Locals" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Locals">
+              <PropertyRef Name="LocalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mails_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Mails" Type="Self.Mails" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Mails">
+              <PropertyRef Name="MailsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Obertes_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Obertes" Type="Self.Obertes" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Obertes">
+              <PropertyRef Name="ObertesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servidors_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Servidors" Type="Self.Servidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Servidors">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transports_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Transports" Type="Self.Transports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Transports">
+              <PropertyRef Name="GroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Anonims_ModelStoreContainer">
+          <EntitySet Name="Acces" EntityType="Self.Acces" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Adreces" EntityType="Self.Adreces" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contactes" EntityType="Self.Contactes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Festius" EntityType="Self.Festius" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Horari" EntityType="Self.Horari" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LatLon" EntityType="Self.LatLon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locals" EntityType="Self.Locals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mails" EntityType="Self.Mails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Obertes" EntityType="Self.Obertes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sections" EntityType="Self.Sections" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Servidors" EntityType="Self.Servidors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transports" EntityType="Self.Transports" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Acces_Groups" Association="Self.FK_Acces_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Acces" EntitySet="Acces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Adreces_Groups" Association="Self.FK_Adreces_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Adreces" EntitySet="Adreces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contactes_Groups" Association="Self.FK_Contactes_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Contactes" EntitySet="Contactes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Festius_Groups" Association="Self.FK_Festius_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Festius" EntitySet="Festius" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Groups_Sections" Association="Self.FK_Groups_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Groups" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Horari_Groups" Association="Self.FK_Horari_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Horari" EntitySet="Horari" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LatLon_Adreces" Association="Self.FK_LatLon_Adreces">
+            <End Role="Adreces" EntitySet="Adreces" />
+            <End Role="LatLon" EntitySet="LatLon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Local_Groups" Association="Self.FK_Local_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Locals" EntitySet="Locals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mails_Groups" Association="Self.FK_Mails_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Mails" EntitySet="Mails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Obertes_Groups" Association="Self.FK_Obertes_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Obertes" EntitySet="Obertes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servidors_Groups" Association="Self.FK_Servidors_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Servidors" EntitySet="Servidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transports_Groups" Association="Self.FK_Transports_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Transports" EntitySet="Transports" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Anonims_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Acces">
+          <Key>
+            <PropertyRef Name="AccesId" />
+          </Key>
+          <Property Name="AccesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Int32" Nullable="false" />
+          <Property Name="ngs" Type="Int32" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Accessibilitat" Type="Boolean" Nullable="false" />
+          <Property Name="observacions" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Acces_Groups" FromRole="Acces" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Adreces">
+          <Key>
+            <PropertyRef Name="AdrecesId" />
+          </Key>
+          <Property Name="AdrecesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" />
+          <Property Name="n" Type="Double" />
+          <Property Name="ngs" Type="Double" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NomGrup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="num" Type="Double" />
+          <Property Name="anum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ps" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="pt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="cp" Type="Double" />
+          <Property Name="poblacio" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="provincia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="observacions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Hyperlink" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="districte" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Comarca" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Adreces_Groups" FromRole="Adreces" ToRole="Groups" />
+          <NavigationProperty Name="LatLon" Relationship="Anonims_Model.FK_LatLon_Adreces" FromRole="Adreces" ToRole="LatLon" />
+        </EntityType>
+        <EntityType Name="Festius">
+          <Key>
+            <PropertyRef Name="FestiusId" />
+          </Key>
+          <Property Name="FestiusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Double" Nullable="false" />
+          <Property Name="ngs" Type="Double" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SessionaFestius" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Observacions" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Festius_Groups" FromRole="Festius" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="GrupsId" />
+          </Key>
+          <Property Name="GrupsId" Type="Int32" Nullable="false" />
+          <Property Name="SectionNumber" Type="Int32" />
+          <Property Name="NomGrup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Opened" Type="Boolean" />
+          <NavigationProperty Name="Acces" Relationship="Self.FK_Acces_Groups" FromRole="Groups" ToRole="Acces" />
+          <NavigationProperty Name="Adreces" Relationship="Self.FK_Adreces_Groups" FromRole="Groups" ToRole="Adreces" />
+          <NavigationProperty Name="Festius" Relationship="Self.FK_Festius_Groups" FromRole="Groups" ToRole="Festius" />
+          <NavigationProperty Name="Sections" Relationship="Self.FK_Groups_Sections" FromRole="Groups" ToRole="Sections" />
+          <NavigationProperty Name="Locals" Relationship="Self.FK_Local_Groups" FromRole="Groups" ToRole="Locals" />
+          <NavigationProperty Name="Mails" Relationship="Self.FK_Mails_Groups" FromRole="Groups" ToRole="Mails" />
+          <NavigationProperty Name="Obertes" Relationship="Self.FK_Obertes_Groups" FromRole="Groups" ToRole="Obertes" />
+          <NavigationProperty Name="Contactes" Relationship="Anonims_Model.FK_Contactes_Groups" FromRole="Groups" ToRole="Contactes" />
+          <NavigationProperty Name="Servidors" Relationship="Anonims_Model.FK_Servidors_Groups" FromRole="Groups" ToRole="Servidors" />
+          <NavigationProperty Name="Transports" Relationship="Anonims_Model.FK_Transports_Groups" FromRole="Groups" ToRole="Transports" />
+          <NavigationProperty Name="Horari" Relationship="Anonims_Model.FK_Horari_Groups" FromRole="Groups" ToRole="Horari" />
+          </EntityType>
+        <EntityType Name="Locals">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Double" Nullable="false" />
+          <Property Name="ngs" Type="Double" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Local" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Local_Groups" FromRole="Locals" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Mails">
+          <Key>
+            <PropertyRef Name="MailsId" />
+          </Key>
+          <Property Name="MailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Double" />
+          <Property Name="ngs" Type="Double" />
+          <Property Name="ns" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Seccio" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NomGrup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EMail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Mails_Groups" FromRole="Mails" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Obertes">
+          <Key>
+            <PropertyRef Name="ObertesId" />
+          </Key>
+          <Property Name="ObertesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Oberta" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Observacions" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Obertes_Groups" FromRole="Obertes" ToRole="Groups" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionNumber" />
+          </Key>
+          <Property Name="SectionNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_Groups_Sections" FromRole="Sections" ToRole="Groups" />
+        </EntityType>
+        <Association Name="FK_Acces_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Acces" Type="Self.Acces" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Acces">
+              <PropertyRef Name="AccesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Adreces_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Adreces" Type="Self.Adreces" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Adreces">
+              <PropertyRef Name="AdrecesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Festius_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Festius" Type="Self.Festius" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Festius">
+              <PropertyRef Name="FestiusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Groups_Sections">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="0..1" />
+          <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionNumber" />
+            </Principal>
+            <Dependent Role="Groups">
+              <PropertyRef Name="SectionNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Local_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Locals" Type="Self.Locals" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Locals">
+              <PropertyRef Name="LocalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mails_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Mails" Type="Self.Mails" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Mails">
+              <PropertyRef Name="MailsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Obertes_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="1" />
+          <End Role="Obertes" Type="Self.Obertes" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Obertes">
+              <PropertyRef Name="ObertesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Anonims_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Acces" EntityType="Self.Acces" />
+          <EntitySet Name="Adreces" EntityType="Self.Adreces" />
+          <EntitySet Name="Festius" EntityType="Self.Festius" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" />
+          <EntitySet Name="Locals" EntityType="Self.Locals" />
+          <EntitySet Name="Mails" EntityType="Self.Mails" />
+          <EntitySet Name="Obertes" EntityType="Self.Obertes" />
+          <EntitySet Name="Sections" EntityType="Self.Sections" />
+          <AssociationSet Name="FK_Acces_Groups" Association="Self.FK_Acces_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Acces" EntitySet="Acces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Adreces_Groups" Association="Self.FK_Adreces_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Adreces" EntitySet="Adreces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Festius_Groups" Association="Self.FK_Festius_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Festius" EntitySet="Festius" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Groups_Sections" Association="Self.FK_Groups_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Groups" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Local_Groups" Association="Self.FK_Local_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Locals" EntitySet="Locals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mails_Groups" Association="Self.FK_Mails_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Mails" EntitySet="Mails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Obertes_Groups" Association="Self.FK_Obertes_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Obertes" EntitySet="Obertes" />
+          </AssociationSet>
+          <EntitySet Name="LatLon" EntityType="Anonims_Model.LatLon" />
+          <AssociationSet Name="FK_LatLon_Adreces" Association="Anonims_Model.FK_LatLon_Adreces">
+            <End Role="Adreces" EntitySet="Adreces" />
+            <End Role="LatLon" EntitySet="LatLon" />
+          </AssociationSet>
+          <EntitySet Name="Contactes" EntityType="Anonims_Model.Contactes" />
+          <AssociationSet Name="FK_Contactes_Groups" Association="Anonims_Model.FK_Contactes_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Contactes" EntitySet="Contactes" />
+          </AssociationSet>
+          <EntitySet Name="Servidors" EntityType="Anonims_Model.Servidors" />
+          <AssociationSet Name="FK_Servidors_Groups" Association="Anonims_Model.FK_Servidors_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Servidors" EntitySet="Servidors" />
+          </AssociationSet>
+          <EntitySet Name="Transports" EntityType="Anonims_Model.Transports" />
+          <AssociationSet Name="FK_Transports_Groups" Association="Anonims_Model.FK_Transports_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Transports" EntitySet="Transports" />
+          </AssociationSet>
+          <EntitySet Name="Horari" EntityType="Anonims_Model.Horari" />
+          <AssociationSet Name="FK_Horari_Groups" Association="Anonims_Model.FK_Horari_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Horari" EntitySet="Horari" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="LatLon">
+          <Key>
+            <PropertyRef Name="LatLonId" />
+          </Key>
+          <Property Name="LatLonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Int32" Nullable="false" />
+          <Property Name="ngs" Type="Int32" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="lat" Type="Double" />
+          <Property Name="lon" Type="Double" />
+          <NavigationProperty Name="Adreces" Relationship="Anonims_Model.FK_LatLon_Adreces" FromRole="LatLon" ToRole="Adreces" />
+        </EntityType>
+        <Association Name="FK_LatLon_Adreces">
+          <End Type="Anonims_Model.Adreces" Role="Adreces" Multiplicity="1" />
+          <End Type="Anonims_Model.LatLon" Role="LatLon" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Adreces">
+              <PropertyRef Name="AdrecesId" />
+            </Principal>
+            <Dependent Role="LatLon">
+              <PropertyRef Name="LatLonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Contactes">
+          <Key>
+            <PropertyRef Name="ContactesId" />
+          </Key>
+          <Property Name="ContactesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Int32" />
+          <Property Name="ngs" Type="Int32" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="Int32" />
+          <NavigationProperty Name="Groups" Relationship="Anonims_Model.FK_Contactes_Groups" FromRole="Contactes" ToRole="Groups" />
+        </EntityType>
+        <Association Name="FK_Contactes_Groups">
+          <End Type="Anonims_Model.Groups" Role="Groups" Multiplicity="1" />
+          <End Type="Anonims_Model.Contactes" Role="Contactes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Contactes">
+              <PropertyRef Name="GroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Servidors">
+          <Key>
+            <PropertyRef Name="ServidorsId" />
+          </Key>
+          <Property Name="ServidorsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Double" Nullable="false" />
+          <Property Name="ngs" Type="Double" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="servei" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="Int32" />
+          <NavigationProperty Name="Groups" Relationship="Anonims_Model.FK_Servidors_Groups" FromRole="Servidors" ToRole="Groups" />
+        </EntityType>
+        <Association Name="FK_Servidors_Groups">
+          <End Type="Anonims_Model.Groups" Role="Groups" Multiplicity="1" />
+          <End Type="Anonims_Model.Servidors" Role="Servidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Servidors">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Transports">
+          <Key>
+            <PropertyRef Name="TransportsId" />
+          </Key>
+          <Property Name="TransportsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="n" Type="Double" Nullable="false" />
+          <Property Name="ngs" Type="Double" />
+          <Property Name="ns" Type="Int32" />
+          <Property Name="Seccio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NomGrup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tipus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Linia" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estacio" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Groups" Relationship="Anonims_Model.FK_Transports_Groups" FromRole="Transports" ToRole="Groups" />
+        </EntityType>
+        <Association Name="FK_Transports_Groups">
+          <End Type="Anonims_Model.Groups" Role="Groups" Multiplicity="1" />
+          <End Type="Anonims_Model.Transports" Role="Transports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Transports">
+              <PropertyRef Name="GroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Horari">
+          <Key>
+            <PropertyRef Name="HorariId" />
+          </Key>
+          <Property Name="HorariId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupsId" Type="Int32" Nullable="false" />
+          <Property Name="WeekDay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hour" Type="Time" Precision="7" />
+          <NavigationProperty Name="Groups" Relationship="Anonims_Model.FK_Horari_Groups" FromRole="Horari" ToRole="Groups" />
+        </EntityType>
+        <Association Name="FK_Horari_Groups">
+          <End Type="Anonims_Model.Groups" Role="Groups" Multiplicity="1" />
+          <End Type="Anonims_Model.Horari" Role="Horari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GrupsId" />
+            </Principal>
+            <Dependent Role="Horari">
+              <PropertyRef Name="GroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Anonims_ModelStoreContainer" CdmEntityContainer="Anonims_Entities">
+          <EntitySetMapping Name="Acces">
+            <EntityTypeMapping TypeName="Anonims_Model.Acces">
+              <MappingFragment StoreEntitySet="Acces">
+                <ScalarProperty Name="AccesId" ColumnName="AccesId" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Accessibilitat" ColumnName="Accessibilitat" />
+                <ScalarProperty Name="observacions" ColumnName="observacions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Adreces">
+            <EntityTypeMapping TypeName="Anonims_Model.Adreces">
+              <MappingFragment StoreEntitySet="Adreces">
+                <ScalarProperty Name="AdrecesId" ColumnName="AdrecesId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="tv" ColumnName="tv" />
+                <ScalarProperty Name="c" ColumnName="c" />
+                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="anum" ColumnName="anum" />
+                <ScalarProperty Name="ps" ColumnName="ps" />
+                <ScalarProperty Name="pt" ColumnName="pt" />
+                <ScalarProperty Name="cp" ColumnName="cp" />
+                <ScalarProperty Name="poblacio" ColumnName="poblacio" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="observacions" ColumnName="observacions" />
+                <ScalarProperty Name="Hyperlink" ColumnName="Hyperlink" />
+                <ScalarProperty Name="districte" ColumnName="districte" />
+                <ScalarProperty Name="Comarca" ColumnName="Comarca" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Festius">
+            <EntityTypeMapping TypeName="Anonims_Model.Festius">
+              <MappingFragment StoreEntitySet="Festius">
+                <ScalarProperty Name="FestiusId" ColumnName="FestiusId" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="SessionaFestius" ColumnName="SessionaFestius" />
+                <ScalarProperty Name="Observacions" ColumnName="Observacions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="Anonims_Model.Groups">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="GrupsId" ColumnName="GrupsId" />
+                <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Opened" ColumnName="Opened" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locals">
+            <EntityTypeMapping TypeName="Anonims_Model.Locals">
+              <MappingFragment StoreEntitySet="Locals">
+                <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mails">
+            <EntityTypeMapping TypeName="Anonims_Model.Mails">
+              <MappingFragment StoreEntitySet="Mails">
+                <ScalarProperty Name="MailsId" ColumnName="MailsId" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Obertes">
+            <EntityTypeMapping TypeName="Anonims_Model.Obertes">
+              <MappingFragment StoreEntitySet="Obertes">
+                <ScalarProperty Name="ObertesId" ColumnName="ObertesId" />
+                <ScalarProperty Name="Oberta" ColumnName="Oberta" />
+                <ScalarProperty Name="Observacions" ColumnName="Observacions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sections">
+            <EntityTypeMapping TypeName="Anonims_Model.Sections">
+              <MappingFragment StoreEntitySet="Sections">
+                <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LatLon">
+            <EntityTypeMapping TypeName="Anonims_Model.LatLon">
+              <MappingFragment StoreEntitySet="LatLon">
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="LatLonId" ColumnName="LatLonId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contactes">
+            <EntityTypeMapping TypeName="Anonims_Model.Contactes">
+              <MappingFragment StoreEntitySet="Contactes">
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="ContactesId" ColumnName="ContactesId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servidors">
+            <EntityTypeMapping TypeName="Anonims_Model.Servidors">
+              <MappingFragment StoreEntitySet="Servidors">
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="servei" ColumnName="servei" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="ServidorsId" ColumnName="ServidorsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transports">
+            <EntityTypeMapping TypeName="Anonims_Model.Transports">
+              <MappingFragment StoreEntitySet="Transports">
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Estacio" ColumnName="Estacio" />
+                <ScalarProperty Name="Linia" ColumnName="Linia" />
+                <ScalarProperty Name="Tipus" ColumnName="Tipus" />
+                <ScalarProperty Name="NomGrup" ColumnName="NomGrup" />
+                <ScalarProperty Name="Seccio" ColumnName="Seccio" />
+                <ScalarProperty Name="ns" ColumnName="ns" />
+                <ScalarProperty Name="ngs" ColumnName="ngs" />
+                <ScalarProperty Name="n" ColumnName="n" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="TransportsId" ColumnName="TransportsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Horari">
+            <EntityTypeMapping TypeName="Anonims_Model.Horari">
+              <MappingFragment StoreEntitySet="Horari">
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="WeekDay" ColumnName="WeekDay" />
+                <ScalarProperty Name="GroupsId" ColumnName="GroupsId" />
+                <ScalarProperty Name="HorariId" ColumnName="HorariId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

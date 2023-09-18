@@ -61,7 +61,7 @@ namespace CommonTools
         public static bool GetIfCorrectFormatMail(string Email)
         {
             bool CorrectFormat;
-            Regex Regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Regex Regex = new Regex(@"^([\w\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 
             Match Match = Regex.Match(Email);
 

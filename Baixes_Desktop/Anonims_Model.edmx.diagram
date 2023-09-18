@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0c0bac1fba54067aa08b67f4fc64281" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="Anonims_Model.Acces" Width="1.5" PointX="4.625" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Adreces" Width="1.5" PointX="2.375" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Festius" Width="1.5" PointX="0.625" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Groups" Width="1.5" PointX="0.625" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Locals" Width="1.5" PointX="9.125" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Mails" Width="1.5" PointX="6.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Obertes" Width="1.5" PointX="4.375" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Anonims_Model.Sections" Width="1.5" PointX="0.625" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="Anonims_Model.FK_Acces_Groups" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="Anonims_Model.FK_Adreces_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="Anonims_Model.FK_Festius_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="Anonims_Model.FK_Groups_Sections" ManuallyRouted="false" />
+        <AssociationConnector Association="Anonims_Model.FK_Local_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="Anonims_Model.FK_Mails_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="Anonims_Model.FK_Obertes_Groups" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Anonims_Model.LatLon" Width="1.5" PointX="6.375" PointY="6.625" />
+        <AssociationConnector Association="Anonims_Model.FK_LatLon_Adreces" />
+        <EntityTypeShape EntityType="Anonims_Model.Contactes" Width="1.5" PointX="6.875" PointY="11.375" />
+        <AssociationConnector Association="Anonims_Model.FK_Contactes_Groups" />
+        <EntityTypeShape EntityType="Anonims_Model.Servidors" Width="1.5" PointX="2.875" PointY="11.375" />
+        <AssociationConnector Association="Anonims_Model.FK_Servidors_Groups" />
+        <EntityTypeShape EntityType="Anonims_Model.Transports" Width="1.5" PointX="5" PointY="11.375" />
+        <AssociationConnector Association="Anonims_Model.FK_Transports_Groups" />
+        <EntityTypeShape EntityType="Anonims_Model.Horari" Width="1.5" PointX="10.125" PointY="0.5" />
+        <AssociationConnector Association="Anonims_Model.FK_Horari_Groups" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

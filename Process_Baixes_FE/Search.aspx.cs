@@ -288,12 +288,7 @@ namespace UnsubscribeR
             FoundsGridView.AllowPaging = true;
             FoundsGridView.DataBind();
 
-
         }
-
-
-       
-
 
         private void SetFoundsGrieViewFromGoogle(GoogleUser GoogleUser)
         {
@@ -550,8 +545,6 @@ namespace UnsubscribeR
         {
             int n = e.Row.RowIndex;
             int nn = ProgrammedGridView.SelectedIndex;
-
-
 
             if (e.Row.RowType == DataControlRowType.DataRow)
             {

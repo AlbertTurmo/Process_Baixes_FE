@@ -23,7 +23,6 @@
 
         .focus-border {
             border-color: #FF0000; /* Replace with the desired border color */
-
         }
 
 
